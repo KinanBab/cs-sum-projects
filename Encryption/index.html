@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Encryption</title>
+    <style>
+      #container {
+        margin-left: 80px;
+      }
+
+      label {
+        font-size: 10pt;
+        font-weight: bold;
+      }
+      
+      textarea { 
+        width: 350px;
+        height: 500px;
+      }      
+      
+      #input {
+        float: left;
+      }
+      
+      #output {
+        float: left;
+      }
+      
+      span {
+        float: left;
+        width: 110px;
+        height: 500px;
+        text-align: center;
+        vertical-align: top;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="cryptico.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Text Encryptor</h1>
+      <label for="passkey">Enter Passkey <input type="password" id="passkey"></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <label for="bits">Enter Encryptiong Key Bit Length <input type="text" id="bits"></label>
+      <br> <br>
+      
+      <textarea id="input" placeholder="Enter text/encrypted text to encrypt/decrypt"></textarea>
+      <span> 
+        <button onclick="encrypt()">Encrypt</button>
+        <br>
+        <button onclick="decrypt()">Decrypt</button> 
+      </span>
+      <textarea id="output" disabled="disabled" placeholder="Output will appear here"></textarea>
+    </div>
+  </body>
+</html>

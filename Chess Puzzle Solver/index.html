@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Chess Puzzle Solver</title>
+    <style>
+      #container {
+        margin-left: 80px;
+      }
+
+      label {
+        font-size: 10pt;
+        font-weight: bold;
+      }
+
+      table {
+        background-color: #888888;
+      }
+
+      #board td {
+        border: 1px solid #000000;
+        width: 55px;
+        height: 55px;
+        font-size: 1pt;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        vertical-align: center;
+      }
+      
+      img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .dark {
+        background-color: #333333;
+      }
+
+      .light {
+        background-color: #FFEEEE;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Chess Puzzle Solver</h1>
+      <table id="board">
+        <tr>
+          <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="light">&nbsp; </td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td> <td class="light">&nbsp;</td> <td class="dark">&nbsp;</td>
+        </tr>
+      </table>
+      <h3>Pieces</h3>
+      <div id="pieces">
+        <img src="imgs/pawn_dark.png"> <img src="imgs/rook_dark.png"> <img src="imgs/knight_dark.png"> <img src="imgs/bishop_dark.png"> <img src="imgs/queen_dark.png"> <img src="imgs/king_dark.png"> <br>
+        <img src="imgs/pawn_light.png"> <img src="imgs/rook_light.png"> <img src="imgs/knight_light.png"> <img src="imgs/bishop_light.png"> <img src="imgs/queen_light.png"> <img src="imgs/king_light.png"> <br>
+      </div>
+
+      First move is: <select id="move"><option value="light">Light</option><option value="dark">Dark</option></select> <br>
+      Checkmate for: <select id="win"><option value="light">Light</option><option value="dark">Dark</option></select> <br>
+      in <select id="number"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select> moves <br><br>
+      <button id="solve" onclick="solve()">Solve</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Conway's Game of Life</title>
+    <style>
+      #container {
+        margin-left: 80px;
+      }
+
+      label {
+        font-size: 10pt;
+        font-weight: bold;
+      }
+
+      #gol td {
+        border: 1px solid #000000;
+        width: 10px;
+        height: 13px;
+        font-size: 1pt;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Game of life</h1>
+      <table id="gol">
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+        <tr>
+          <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> <td class='dead'>&nbsp;</td> 
+        </tr>
+      </table>
+      <h3>Controls</h3>
+      <button id="step" onclick="step()">Step</button> <button id="play" onclick="play()">Play</button>
+      <button id="pause" disabled="disabled" onclick="pause()">Pause</button> <button id="clear" onclick="clear()">Clear</button> <br> <br>
+      <label for="speed">Speed</label>: <select id="speed">
+        <option value="3000">0.5x</option>
+        <option value="1500">1x</option>
+        <option value="750">2x</option>
+        <option value="300">5x</option>
+      </select>
+    </div>
+  </body>
+</html>

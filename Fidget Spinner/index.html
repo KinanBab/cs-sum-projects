@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Fidget Spinner</title>
+    <style>
+      #container {
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Fidget Spinner</h1>
+      <button onclick="start()">Begin</button> <button onclick="stop()">Stop</button>  <button onclick="changeURL()">Change Image</button>
+      <br> <br> <br> <br> <br> <br> <br>
+      <span>
+        <img id="fidget" 
+          src="https://i5.walmartimages.com/asr/7d33a628-5ac9-4568-b3d8-a7e68d518e76_1.7f938887b584cf46a8439c9eb8339a77.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
+          onmouseover="over()"
+          onmouseout="out()"> 
+      </span>
+      <br> <br> <br> <br> <br> <br> <br>
+    </div>
+  </body>
+</html>
