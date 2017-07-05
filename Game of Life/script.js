@@ -22,6 +22,8 @@ function initialize() {
   // set on click handler for every cell. The click handler must
   // flip the class attribute of that cell between dead and alive.
   // It must also store whether the cell is dead or alive in the 2D array.
+  // Also, remember to put in the row and column index of the cell
+  // inside the "dataset" attribute of the td.
   
   // Also assign an id to every cell so that you can access it later. 
   // a good id may be something like this:

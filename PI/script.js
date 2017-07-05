@@ -96,6 +96,7 @@ function start() {
   //       In particular the section on "Getting a random integer between two values, inclusive"
 
   // Test if the random point is in the circle or not, draw it in a different color.
+  // Keep track of the number of points inside the circle in some variable.
   
   // When all the points are done. Compute the ratio of points in circle to total points.
   // Compute pi by multiplying the ratio by 4.

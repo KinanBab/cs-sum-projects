@@ -34,8 +34,8 @@ function initialize() {
   // loop over all cells
   // in other words, loop over every row in the table (<tr>)
   // and inside that loop, loop again over every cell in that row (<td>).
-  // set on click handler for every cell. use the function cell_click(td, i, j)
-  // as a click handler passing td, i, j as arguments (row and col index).
+  // set on click handler for every cell. use the function "cell_click" below as click handler.
+  // Remember to put the row and column index in the "dataset" attribute of the td.
   
   // Also assign an id to every cell so that you can access it later. 
   // a good id may be something like this:
@@ -53,6 +53,7 @@ function generate() {
   // Loop over the number of mines (repeat for the number of mines):
   //  1. Pick a random cell and check that it has no mine.
   //  2. if the cell has no mine put a mine in it and increment the counter.
+  //     Also, increment the value of every neighbor of that cell that has no mine.
   //  3. if the cell has a mine already, repeat without incrementing the counter.
   // When you put a mine in the cell, that means you have to modify the value of 
   // the cell in the global 2D array.
@@ -77,10 +78,9 @@ function mark_mine() {
 
 /*
  * Called when a cell is clicked.
- * i is the index of the row.
- * j is the index of the column.
+ * Remember you can access the cell using this.
  */
-function cell_click(i, j) {
+function cell_click() {
   // Get the cell td element from the html, remember that you assigned every cell an id
   // inside the intialize function.
 
@@ -89,15 +89,17 @@ function cell_click(i, j) {
   // If it happened after mark mine, change the content of td to "!" and return.
   
   // If it did not happen after mark mine, then change the content of the td
-  // to either "x" if the cell has a mine, * if it is empty, or the number of neighbor mines otherwise.
-  // You can check if the cell is empty or not by using the global 2D array and the indices i and j.
+  // to either "x" if the cell has a mine, * if it is empty, or the number of neighbor 
+  // mines otherwise (the number in the array).
+  // You can check if the cell has a mine, is empty, or know the number of neighbor mines
+  // using the global 2D array.
   
   // If the cell had a mine, alert to the use "game over".
   
   // If the cell is empty, open every cell that is adjecent that has no mine.
   // You can do that by looping over every adjecent cell (try all combinations of increasing 
-  // and decreasing i and j by 1), checking that the cell has no mine, and calling cell_click 
-  // recursively on that cell (by passing the increased or decreased i and j).
+  // and decreasing i and j by 1), checking that the cell has no mine, opening it, and then recursivley
+  // doing the same for that cell if it is empty.
   
 }
 
