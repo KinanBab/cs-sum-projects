@@ -1,5 +1,5 @@
 /*
- * Difficulty of project: medium.
+ * Difficulty of project: hard.
  * Team size: 2-3.
  */
  
