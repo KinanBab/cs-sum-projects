@@ -1,6 +1,6 @@
 /*
  * Difficulty of project: medium.
- * Team size: 2. Projects of 3 are acceptable as well, but they 
+ * Team size: 2. Teams of 3 are acceptable as well, but they 
  *            will have to do one more image filter/effect.
  */
  
