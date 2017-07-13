@@ -36,15 +36,14 @@ function grayscale() {
   // Say the pixel has values [r, g, b, a], compute the average of r, g, and b.
   // Set the new pixel value to be [average, average, average, a].
   
-  // Do not forget to call draw.
+  // Do not forget to call drawImage.
   
 }
-
 
 function blurImage() {
   // Create a new result array to hold the image data.
   // This is needed because bluring requires you to look at other pixels (before they were modified).
-  // And change the values accordingly. If you save your changes directly to the array, you wil
+  // And change the values accordingly. If you save your changes directly to the array, you will
   // loose the old values of the pixel.
   // Make sure the array has the same dimensions (maybe create a copy).
 
@@ -63,11 +62,9 @@ function blurImage() {
   // Dont forget to overwrite imageData with the new result array.  
 
   
-  // Do not forget to call draw.
+  // Do not forget to call drawImage.
 
 }
-
-
 
 // Choose the image and draw it in canvas.
 $(function() {  
@@ -109,8 +106,7 @@ $(function() {
   };
 });
   
-
-// Call draw when you are done processing the image.
+// Call drawImage when you are done processing the image.
 function drawImage() {
   // Get canvas and context.
   var canvas = document.getElementById("drawing_canvas");
@@ -133,5 +129,4 @@ function drawImage() {
   // Draw.
   drawingContext.putImageData(newData, 0, 0);
 }
-
 
