@@ -19,16 +19,27 @@ function initialize() {
   // loop over all cells
   // in other words, loop over every row in the table (<tr>)
   // and inside that loop, loop again over every cell in that row (<td>).
-  // set on click handler for every cell. The click handler must
-  // flip the class attribute of that cell between dead and alive.
-  // It must also store whether the cell is dead or alive in the 2D array.
-  // Also, remember to put in the row and column index of the cell
-  // inside the "dataset" attribute of the td.
+  // you need to initialize the 2D array contents to an empty array for 
+  // every row at the start of the first loop.
   
-  // Also assign an id to every cell so that you can access it later. 
+  // For every cell do the following:
+  // 1. put the row and column index of the cell
+  // inside the `dataset["row"]` and `dataset["col"]` attributes of the td.
+  
+  // 2. Assign false to the 2D array at the row and column indices.
+  // This says that the cell is initally dead.
+  
+  // 3. Assign an id to every cell so that you can access it later.
   // a good id may be something like this:
   //        cell_i_j
   // where i is the index of the row, and j is the index of the column.
+  
+  // 4. Set an onclick handler for every cell. The click handler must
+  // change the background color of the cell between black and white (alive and dead).
+  // It must also store whether the cell is alive or dead in the 2D array.
+  // Hint: since you set dataset["row"] and dataset["col"] in step 1, you can
+  // use `this.dataset["row"]` and `this.dataset["col"]` inside the onclick handler
+  // to retrieve the row and column index of the cell being clicked.
   
 }
 
@@ -61,7 +72,8 @@ function play() {
   // Get the value of speed element and use it as the interval x.
   
   
-  step_timer = window.setInterval(step, x); // This will call the function step every x amount of milliseconds.
+  // This will call the function step every x amount of milliseconds.
+  step_timer = window.setInterval(step, x);
 }
 
 /*
