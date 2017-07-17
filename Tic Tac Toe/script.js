@@ -103,7 +103,7 @@ function copy_2D_array(array) {
  * This is the function that starts the game.
  */
 function play() {
-  var player2Start = document.getElementById(start);
+  var player2Start = document.getElementById("start").value;
   if(player2Start == "computer") {
     var player = turn;
     var other_player = (player == "X" ? "O" : "X"); // Flip the player.
@@ -154,7 +154,7 @@ function player_max(current_board, player, other_player) {
  * The min player (this is what the AI will use to simulate the human player)
  * Takes as parameters the board and the current player (X or O). 
  */
-function player_min(player, other_player) {
+function player_min(current_board, player, other_player) {
   // Do the same as the above function, but find the move with minimum score instead of maximum.
   // Also, call player_max from here instead of player_min.
 }
