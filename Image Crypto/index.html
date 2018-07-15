@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Hide Messages In Pictures</title>
+    <style>
+      #container {
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+
+      textarea { 
+        width: 600px;
+        height: 60px;
+      }      
+
+      canvas {
+        width: 500px;
+        height: 500px;
+        padding: 0; border: 0;
+      }
+      
+      #right {
+        margin-left: 60px;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Hide Message</h1>
+      <br> 
+      <textarea id="input" placeholder="Enter text/encrypted text to hide"></textarea>
+      <br> <br>
+
+      <span id="left">
+        <img id="image" width="500" height="500" >
+      </span>
+      
+      <span id="right">
+        <canvas id="drawing_canvas" width="500" height="500">
+        </canvas>
+      </span>
+      
+      <br> <br>
+      <button onclick="hide();">Hide</button> &nbsp; <button onclick="show();">Show</button>
+    </div>
+  </body>
+</html>
