@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Image Processing</title>
+    <title>Spaceship</title>
     <style>
       #container {
         margin-left: 80px;
@@ -11,10 +11,7 @@
         width: 500px;
         height: 500px;
         padding: 0; border: 0;
-      }
-      
-      #right {
-        margin-left: 60px;
+        border: 1px solid black;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -22,19 +19,12 @@
   </head>
   <body>
     <div id="container">
-      <h1>Image Processing</h1>
-      <br> 
-      <span id="left">
-        <img id="image" width="500" height="500">
-      </span>
-      
-      <span id="right">
-        <canvas id="drawing_canvas" width="500" height="500">
-        </canvas>
-      </span>
-      
+      <h1>Spaceship</h1>
+	  <h3>Avoid Projectiles</h3>
+      <button onclick="start()">Begin</button>
       <br> <br>
-      <button onclick="grayscale();">Grayscale</button> &nbsp; <button onclick="blurImage();">Blur</button>
+      <canvas id="drawing_canvas" width="500" height="500">
+      </canvas>
     </div>
   </body>
 </html>

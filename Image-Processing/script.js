@@ -40,6 +40,18 @@ function grayscale() {
   
 }
 
+/*
+ * Invert the colors of every pixel
+ */
+function invert() {
+  // Loop over every pixel (every row and column).
+  // Say the pixel has values [r, g, b, a], compute the average of r, g, and b.
+  // Set the new pixel value to be [average, average, average, a].
+  
+  // Do not forget to call drawImage.
+}
+
+
 function blurImage() {
   // Create a new result array to hold the image data.
   // This is needed because bluring requires you to look at other pixels (before they were modified).

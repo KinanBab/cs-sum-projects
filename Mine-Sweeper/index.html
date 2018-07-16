@@ -1,0 +1,339 @@
+<html>
+  <head>
+    <title>Mine Sweeper</title>
+    <style>
+      #container {
+        margin-left: 80px;
+      }
+
+      label {
+        font-size: 10pt;
+        font-weight: bold;
+      }
+
+      #minefield td {
+        border: 1px solid #000000;
+        width: 35px;
+        height: 38px;
+        font-size: 10pt;
+        margin: 0;
+        padding: 0;
+      }
+      
+      td {
+        text-align: center;
+        font-weight: bold;
+        background-color: #D5D4D4
+      }
+
+      .td0 {
+        color: #8A8989;
+        background-color: #8A8989
+      }
+
+      .td1 {
+        color: blue;
+      }
+
+      .td2 {
+        color: green;
+      }
+
+      .td3 {
+        color: red;
+      }
+
+      .td4 {
+        color: purple;
+      }
+
+      .td5 {
+        color: maroon;
+      }
+
+      .td6 {
+        color: turquoise;
+      }
+
+      .td7 {
+        color: black;
+      }
+
+      .td8 {
+        color: grey;
+      }
+
+      .tdx {
+        color: #FE6B01;
+      }
+
+    </style>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Mine Sweeper</h1>
+      <table id="minefield">
+        <tr>
+          <td onclick="clicked(0,0)" id="cell_0_0">&nbsp;</td>
+          <td onclick="clicked(0,1)" id="cell_0_1">&nbsp;</td>
+          <td onclick="clicked(0,2)" id="cell_0_2">&nbsp;</td>
+          <td onclick="clicked(0,3)" id="cell_0_3">&nbsp;</td>
+          <td onclick="clicked(0,4)" id="cell_0_4">&nbsp;</td>
+          <td onclick="clicked(0,5)" id="cell_0_5">&nbsp;</td>
+          <td onclick="clicked(0,6)" id="cell_0_6">&nbsp;</td>
+          <td onclick="clicked(0,7)" id="cell_0_7">&nbsp;</td>
+          <td onclick="clicked(0,8)" id="cell_0_8">&nbsp;</td>
+          <td onclick="clicked(0,9)" id="cell_0_9">&nbsp;</td>
+          <td onclick="clicked(0,10)" id="cell_0_10">&nbsp;</td>
+          <td onclick="clicked(0,11)" id="cell_0_11">&nbsp;</td>
+          <td onclick="clicked(0,12)" id="cell_0_12">&nbsp;</td>
+          <td onclick="clicked(0,13)" id="cell_0_13">&nbsp;</td>
+          <td onclick="clicked(0,14)" id="cell_0_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(1,0)" id="cell_1_0">&nbsp;</td>
+          <td onclick="clicked(1,1)" id="cell_1_1">&nbsp;</td>
+          <td onclick="clicked(1,2)" id="cell_1_2">&nbsp;</td>
+          <td onclick="clicked(1,3)" id="cell_1_3">&nbsp;</td>
+          <td onclick="clicked(1,4)" id="cell_1_4">&nbsp;</td>
+          <td onclick="clicked(1,5)" id="cell_1_5">&nbsp;</td>
+          <td onclick="clicked(1,6)" id="cell_1_6">&nbsp;</td>
+          <td onclick="clicked(1,7)" id="cell_1_7">&nbsp;</td>
+          <td onclick="clicked(1,8)" id="cell_1_8">&nbsp;</td>
+          <td onclick="clicked(1,9)" id="cell_1_9">&nbsp;</td>
+          <td onclick="clicked(1,10)" id="cell_1_10">&nbsp;</td>
+          <td onclick="clicked(1,11)" id="cell_1_11">&nbsp;</td>
+          <td onclick="clicked(1,12)" id="cell_1_12">&nbsp;</td>
+          <td onclick="clicked(1,13)" id="cell_1_13">&nbsp;</td>
+          <td onclick="clicked(1,14)" id="cell_1_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(2,0)" id="cell_2_0">&nbsp;</td>
+          <td onclick="clicked(2,1)" id="cell_2_1">&nbsp;</td>
+          <td onclick="clicked(2,2)" id="cell_2_2">&nbsp;</td>
+          <td onclick="clicked(2,3)" id="cell_2_3">&nbsp;</td>
+          <td onclick="clicked(2,4)" id="cell_2_4">&nbsp;</td>
+          <td onclick="clicked(2,5)" id="cell_2_5">&nbsp;</td>
+          <td onclick="clicked(2,6)" id="cell_2_6">&nbsp;</td>
+          <td onclick="clicked(2,7)" id="cell_2_7">&nbsp;</td>
+          <td onclick="clicked(2,8)" id="cell_2_8">&nbsp;</td>
+          <td onclick="clicked(2,9)" id="cell_2_9">&nbsp;</td>
+          <td onclick="clicked(2,10)" id="cell_2_10">&nbsp;</td>
+          <td onclick="clicked(2,11)" id="cell_2_11">&nbsp;</td>
+          <td onclick="clicked(2,12)" id="cell_2_12">&nbsp;</td>
+          <td onclick="clicked(2,13)" id="cell_2_13">&nbsp;</td>
+          <td onclick="clicked(2,14)" id="cell_2_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(3,0)" id="cell_3_0">&nbsp;</td>
+          <td onclick="clicked(3,1)" id="cell_3_1">&nbsp;</td>
+          <td onclick="clicked(3,2)" id="cell_3_2">&nbsp;</td>
+          <td onclick="clicked(3,3)" id="cell_3_3">&nbsp;</td>
+          <td onclick="clicked(3,4)" id="cell_3_4">&nbsp;</td>
+          <td onclick="clicked(3,5)" id="cell_3_5">&nbsp;</td>
+          <td onclick="clicked(3,6)" id="cell_3_6">&nbsp;</td>
+          <td onclick="clicked(3,7)" id="cell_3_7">&nbsp;</td>
+          <td onclick="clicked(3,8)" id="cell_3_8">&nbsp;</td>
+          <td onclick="clicked(3,9)" id="cell_3_9">&nbsp;</td>
+          <td onclick="clicked(3,10)" id="cell_3_10">&nbsp;</td>
+          <td onclick="clicked(3,11)" id="cell_3_11">&nbsp;</td>
+          <td onclick="clicked(3,12)" id="cell_3_12">&nbsp;</td>
+          <td onclick="clicked(3,13)" id="cell_3_13">&nbsp;</td>
+          <td onclick="clicked(3,14)" id="cell_3_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(4,0)" id="cell_4_0">&nbsp;</td>
+          <td onclick="clicked(4,1)" id="cell_4_1">&nbsp;</td>
+          <td onclick="clicked(4,2)" id="cell_4_2">&nbsp;</td>
+          <td onclick="clicked(4,3)" id="cell_4_3">&nbsp;</td>
+          <td onclick="clicked(4,4)" id="cell_4_4">&nbsp;</td>
+          <td onclick="clicked(4,5)" id="cell_4_5">&nbsp;</td>
+          <td onclick="clicked(4,6)" id="cell_4_6">&nbsp;</td>
+          <td onclick="clicked(4,7)" id="cell_4_7">&nbsp;</td>
+          <td onclick="clicked(4,8)" id="cell_4_8">&nbsp;</td>
+          <td onclick="clicked(4,9)" id="cell_4_9">&nbsp;</td>
+          <td onclick="clicked(4,10)" id="cell_4_10">&nbsp;</td>
+          <td onclick="clicked(4,11)" id="cell_4_11">&nbsp;</td>
+          <td onclick="clicked(4,12)" id="cell_4_12">&nbsp;</td>
+          <td onclick="clicked(4,13)" id="cell_4_13">&nbsp;</td>
+          <td onclick="clicked(4,14)" id="cell_4_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(5,0)" id="cell_5_0">&nbsp;</td>
+          <td onclick="clicked(5,1)" id="cell_5_1">&nbsp;</td>
+          <td onclick="clicked(5,2)" id="cell_5_2">&nbsp;</td>
+          <td onclick="clicked(5,3)" id="cell_5_3">&nbsp;</td>
+          <td onclick="clicked(5,4)" id="cell_5_4">&nbsp;</td>
+          <td onclick="clicked(5,5)" id="cell_5_5">&nbsp;</td>
+          <td onclick="clicked(5,6)" id="cell_5_6">&nbsp;</td>
+          <td onclick="clicked(5,7)" id="cell_5_7">&nbsp;</td>
+          <td onclick="clicked(5,8)" id="cell_5_8">&nbsp;</td>
+          <td onclick="clicked(5,9)" id="cell_5_9">&nbsp;</td>
+          <td onclick="clicked(5,10)" id="cell_5_10">&nbsp;</td>
+          <td onclick="clicked(5,11)" id="cell_5_11">&nbsp;</td>
+          <td onclick="clicked(5,12)" id="cell_5_12">&nbsp;</td>
+          <td onclick="clicked(5,13)" id="cell_5_13">&nbsp;</td>
+          <td onclick="clicked(5,14)" id="cell_5_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(6,0)" id="cell_6_0">&nbsp;</td>
+          <td onclick="clicked(6,1)" id="cell_6_1">&nbsp;</td>
+          <td onclick="clicked(6,2)" id="cell_6_2">&nbsp;</td>
+          <td onclick="clicked(6,3)" id="cell_6_3">&nbsp;</td>
+          <td onclick="clicked(6,4)" id="cell_6_4">&nbsp;</td>
+          <td onclick="clicked(6,5)" id="cell_6_5">&nbsp;</td>
+          <td onclick="clicked(6,6)" id="cell_6_6">&nbsp;</td>
+          <td onclick="clicked(6,7)" id="cell_6_7">&nbsp;</td>
+          <td onclick="clicked(6,8)" id="cell_6_8">&nbsp;</td>
+          <td onclick="clicked(6,9)" id="cell_6_9">&nbsp;</td>
+          <td onclick="clicked(6,10)" id="cell_6_10">&nbsp;</td>
+          <td onclick="clicked(6,11)" id="cell_6_11">&nbsp;</td>
+          <td onclick="clicked(6,12)" id="cell_6_12">&nbsp;</td>
+          <td onclick="clicked(6,13)" id="cell_6_13">&nbsp;</td>
+          <td onclick="clicked(6,14)" id="cell_6_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(7,0)" id="cell_7_0">&nbsp;</td>
+          <td onclick="clicked(7,1)" id="cell_7_1">&nbsp;</td>
+          <td onclick="clicked(7,2)" id="cell_7_2">&nbsp;</td>
+          <td onclick="clicked(7,3)" id="cell_7_3">&nbsp;</td>
+          <td onclick="clicked(7,4)" id="cell_7_4">&nbsp;</td>
+          <td onclick="clicked(7,5)" id="cell_7_5">&nbsp;</td>
+          <td onclick="clicked(7,6)" id="cell_7_6">&nbsp;</td>
+          <td onclick="clicked(7,7)" id="cell_7_7">&nbsp;</td>
+          <td onclick="clicked(7,8)" id="cell_7_8">&nbsp;</td>
+          <td onclick="clicked(7,9)" id="cell_7_9">&nbsp;</td>
+          <td onclick="clicked(7,10)" id="cell_7_10">&nbsp;</td>
+          <td onclick="clicked(7,11)" id="cell_7_11">&nbsp;</td>
+          <td onclick="clicked(7,12)" id="cell_7_12">&nbsp;</td>
+          <td onclick="clicked(7,13)" id="cell_7_13">&nbsp;</td>
+          <td onclick="clicked(7,14)" id="cell_7_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(8,0)" id="cell_8_0">&nbsp;</td>
+          <td onclick="clicked(8,1)" id="cell_8_1">&nbsp;</td>
+          <td onclick="clicked(8,2)" id="cell_8_2">&nbsp;</td>
+          <td onclick="clicked(8,3)" id="cell_8_3">&nbsp;</td>
+          <td onclick="clicked(8,4)" id="cell_8_4">&nbsp;</td>
+          <td onclick="clicked(8,5)" id="cell_8_5">&nbsp;</td>
+          <td onclick="clicked(8,6)" id="cell_8_6">&nbsp;</td>
+          <td onclick="clicked(8,7)" id="cell_8_7">&nbsp;</td>
+          <td onclick="clicked(8,8)" id="cell_8_8">&nbsp;</td>
+          <td onclick="clicked(8,9)" id="cell_8_9">&nbsp;</td>
+          <td onclick="clicked(8,10)" id="cell_8_10">&nbsp;</td>
+          <td onclick="clicked(8,11)" id="cell_8_11">&nbsp;</td>
+          <td onclick="clicked(8,12)" id="cell_8_12">&nbsp;</td>
+          <td onclick="clicked(8,13)" id="cell_8_13">&nbsp;</td>
+          <td onclick="clicked(8,14)" id="cell_8_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(9,0)" id="cell_9_0">&nbsp;</td>
+          <td onclick="clicked(9,1)" id="cell_9_1">&nbsp;</td>
+          <td onclick="clicked(9,2)" id="cell_9_2">&nbsp;</td>
+          <td onclick="clicked(9,3)" id="cell_9_3">&nbsp;</td>
+          <td onclick="clicked(9,4)" id="cell_9_4">&nbsp;</td>
+          <td onclick="clicked(9,5)" id="cell_9_5">&nbsp;</td>
+          <td onclick="clicked(9,6)" id="cell_9_6">&nbsp;</td>
+          <td onclick="clicked(9,7)" id="cell_9_7">&nbsp;</td>
+          <td onclick="clicked(9,8)" id="cell_9_8">&nbsp;</td>
+          <td onclick="clicked(9,9)" id="cell_9_9">&nbsp;</td>
+          <td onclick="clicked(9,10)" id="cell_9_10">&nbsp;</td>
+          <td onclick="clicked(9,11)" id="cell_9_11">&nbsp;</td>
+          <td onclick="clicked(9,12)" id="cell_9_12">&nbsp;</td>
+          <td onclick="clicked(9,13)" id="cell_9_13">&nbsp;</td>
+          <td onclick="clicked(9,14)" id="cell_9_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(10,0)" id="cell_10_0">&nbsp;</td>
+          <td onclick="clicked(10,1)" id="cell_10_1">&nbsp;</td>
+          <td onclick="clicked(10,2)" id="cell_10_2">&nbsp;</td>
+          <td onclick="clicked(10,3)" id="cell_10_3">&nbsp;</td>
+          <td onclick="clicked(10,4)" id="cell_10_4">&nbsp;</td>
+          <td onclick="clicked(10,5)" id="cell_10_5">&nbsp;</td>
+          <td onclick="clicked(10,6)" id="cell_10_6">&nbsp;</td>
+          <td onclick="clicked(10,7)" id="cell_10_7">&nbsp;</td>
+          <td onclick="clicked(10,8)" id="cell_10_8">&nbsp;</td>
+          <td onclick="clicked(10,9)" id="cell_10_9">&nbsp;</td>
+          <td onclick="clicked(10,10)" id="cell_10_10">&nbsp;</td>
+          <td onclick="clicked(10,11)" id="cell_10_11">&nbsp;</td>
+          <td onclick="clicked(10,12)" id="cell_10_12">&nbsp;</td>
+          <td onclick="clicked(10,13)" id="cell_10_13">&nbsp;</td>
+          <td onclick="clicked(10,14)" id="cell_10_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(11,0)" id="cell_11_0">&nbsp;</td>
+          <td onclick="clicked(11,1)" id="cell_11_1">&nbsp;</td>
+          <td onclick="clicked(11,2)" id="cell_11_2">&nbsp;</td>
+          <td onclick="clicked(11,3)" id="cell_11_3">&nbsp;</td>
+          <td onclick="clicked(11,4)" id="cell_11_4">&nbsp;</td>
+          <td onclick="clicked(11,5)" id="cell_11_5">&nbsp;</td>
+          <td onclick="clicked(11,6)" id="cell_11_6">&nbsp;</td>
+          <td onclick="clicked(11,7)" id="cell_11_7">&nbsp;</td>
+          <td onclick="clicked(11,8)" id="cell_11_8">&nbsp;</td>
+          <td onclick="clicked(11,9)" id="cell_11_9">&nbsp;</td>
+          <td onclick="clicked(11,10)" id="cell_11_10">&nbsp;</td>
+          <td onclick="clicked(11,11)" id="cell_11_11">&nbsp;</td>
+          <td onclick="clicked(11,12)" id="cell_11_12">&nbsp;</td>
+          <td onclick="clicked(11,13)" id="cell_11_13">&nbsp;</td>
+          <td onclick="clicked(11,14)" id="cell_11_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(12,0)" id="cell_12_0">&nbsp;</td>
+          <td onclick="clicked(12,1)" id="cell_12_1">&nbsp;</td>
+          <td onclick="clicked(12,2)" id="cell_12_2">&nbsp;</td>
+          <td onclick="clicked(12,3)" id="cell_12_3">&nbsp;</td>
+          <td onclick="clicked(12,4)" id="cell_12_4">&nbsp;</td>
+          <td onclick="clicked(12,5)" id="cell_12_5">&nbsp;</td>
+          <td onclick="clicked(12,6)" id="cell_12_6">&nbsp;</td>
+          <td onclick="clicked(12,7)" id="cell_12_7">&nbsp;</td>
+          <td onclick="clicked(12,8)" id="cell_12_8">&nbsp;</td>
+          <td onclick="clicked(12,9)" id="cell_12_9">&nbsp;</td>
+          <td onclick="clicked(12,10)" id="cell_12_10">&nbsp;</td>
+          <td onclick="clicked(12,11)" id="cell_12_11">&nbsp;</td>
+          <td onclick="clicked(12,12)" id="cell_12_12">&nbsp;</td>
+          <td onclick="clicked(12,13)" id="cell_12_13">&nbsp;</td>
+          <td onclick="clicked(12,14)" id="cell_12_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(13,0)" id="cell_13_0">&nbsp;</td>
+          <td onclick="clicked(13,1)" id="cell_13_1">&nbsp;</td>
+          <td onclick="clicked(13,2)" id="cell_13_2">&nbsp;</td>
+          <td onclick="clicked(13,3)" id="cell_13_3">&nbsp;</td>
+          <td onclick="clicked(13,4)" id="cell_13_4">&nbsp;</td>
+          <td onclick="clicked(13,5)" id="cell_13_5">&nbsp;</td>
+          <td onclick="clicked(13,6)" id="cell_13_6">&nbsp;</td>
+          <td onclick="clicked(13,7)" id="cell_13_7">&nbsp;</td>
+          <td onclick="clicked(13,8)" id="cell_13_8">&nbsp;</td>
+          <td onclick="clicked(13,9)" id="cell_13_9">&nbsp;</td>
+          <td onclick="clicked(13,10)" id="cell_13_10">&nbsp;</td>
+          <td onclick="clicked(13,11)" id="cell_13_11">&nbsp;</td>
+          <td onclick="clicked(13,12)" id="cell_13_12">&nbsp;</td>
+          <td onclick="clicked(13,13)" id="cell_13_13">&nbsp;</td>
+          <td onclick="clicked(13,14)" id="cell_13_14">&nbsp;</td>
+        </tr>
+        <tr>
+          <td onclick="clicked(14,0)" id="cell_14_0">&nbsp;</td>
+          <td onclick="clicked(14,1)" id="cell_14_1">&nbsp;</td>
+          <td onclick="clicked(14,2)" id="cell_14_2">&nbsp;</td>
+          <td onclick="clicked(14,3)" id="cell_14_3">&nbsp;</td>
+          <td onclick="clicked(14,4)" id="cell_14_4">&nbsp;</td>
+          <td onclick="clicked(14,5)" id="cell_14_5">&nbsp;</td>
+          <td onclick="clicked(14,6)" id="cell_14_6">&nbsp;</td>
+          <td onclick="clicked(14,7)" id="cell_14_7">&nbsp;</td>
+          <td onclick="clicked(14,8)" id="cell_14_8">&nbsp;</td>
+          <td onclick="clicked(14,9)" id="cell_14_9">&nbsp;</td>
+          <td onclick="clicked(14,10)" id="cell_14_10">&nbsp;</td>
+          <td onclick="clicked(14,11)" id="cell_14_11">&nbsp;</td>
+          <td onclick="clicked(14,12)" id="cell_14_12">&nbsp;</td>
+          <td onclick="clicked(14,13)" id="cell_14_13">&nbsp;</td>
+          <td onclick="clicked(14,14)" id="cell_14_14">&nbsp;</td>
+        </tr>
+      </table>
+      <h3>Controls</h3>
+      <label for="num_mines">Enter number of mines <input type="text" id="num_mines"></label>
+      <button onclick="generate()">Generate Field</button>
+      <button onclick="mark_mine()">Mark as Mine</button>
+    </div>
+  </body>
+</html>
